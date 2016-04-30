@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+		<meta name="description" content="ES6 JS/HTML binding library, for creating dynamic web applications through HTML attribute binding.
+		Built from 4 libraries, raziloBind Pulls in the core, binders, resolvers and alterers to give you
+		all you need for juicy HTML binding goodness on an ES6 platter.">
+		<meta name="keywords" content="js, es6, data, binding, view, model, vm, html, element, library, framework">
+		<title>raziloBind Example Hellow World</title>
+
+		<!-- Site style -->
+		<link rel="shortcut icon" href="assets/favicon.ico" type="image/x-icon">
+		<link href="https://fonts.googleapis.com/css?family=Exo+2:400,400italic,500,500italic,700,700italic|Pacifico" rel="stylesheet" type="text/css">
+		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
+		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.1/css/font-awesome.min.css">
+		<link rel="stylesheet" type="text/css" href="assets/style.min.css">
+
+		<!-- Polyfill native API's if missing -->
+        <script type="text/javascript" src="node_modules/proxy-polyfill/proxy.js"></script>
+	</head>
+	<body>
+		<div class="examples">
+			<div class="row">
+				<div class="col-sm-3-offset col-sm-6">
+					<p class="text-center">
+						<a href="https://github.com/smiffy6969/razilobind-examples-helloworld"><i class="fa fa-github"></i> Get this code</a>
+					</p>
+					<div id="hello-world-app" class="text-center">
+						<h2>Hello World</h2>
+						<p><em bind-text="hello"></em></p>
+						<p bind-show="clicked" class="larger-text">
+							You clicked that baby
+							<span class="label" bind-class="labelClicked(clicked)">
+								<span bind-text="clicked"></span> TIME<span bind-show="moreThanOne(clicked)">S</span>
+							</span>
+						</p>
+						<p bind-show="clicked">Good on you, well done... keep going!</p>
+						<p bind-show="moreThanTen(clicked)">My my, you are persistent, thats enough.</p>
+						<button class="btn btn-success" bind-event="{'click': clickedIt()}" bind-attribute="{'disabled': moreThanTen(clicked)}">Click Me Now!</button>
+					</div>
+				</div>
+			</div>
+		</div>
+		<script type="text/javascript" src="assets/distributable.js"></script>
+	</body>
+</html>
