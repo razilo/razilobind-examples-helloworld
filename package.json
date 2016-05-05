@@ -1,7 +1,7 @@
 {
 	"name": "razilobind-examples-helloworld",
 	"description": "Hello world example from the raziloBind website.",
-	"version": "0.0.1",
+	"version": "0.0.2",
 	"licence": "MIT",
 	"author": {
 		"name": "Paul Smith",
@@ -9,7 +9,7 @@
 	},
 	"dependencies": {
 		"express": "^4.13.4",
-		"razilobind": "^1.0.1"
+		"razilobind": "^1.0.5"
 	},
 	"devDependencies": {
 		"babel-core": "^6.7.7",
